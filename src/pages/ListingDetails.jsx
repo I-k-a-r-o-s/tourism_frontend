@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { TourismContext } from "../context/TourismContext";
 import toast from "react-hot-toast";
+import DeleteListingModal from "../components/DeleteListingModal";
 
 const ListingDetails = () => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const ListingDetails = () => {
           <p>Price: {listing?.price}</p>
           <p>Creator: {listing?.user.name}</p>
           <p>Likes: {listing?.likesCount}</p>
-          <button className="btn btn-primary">Get Started</button>
+          <DeleteListingModal id={id} />
         </div>
       </div>
     </div>
