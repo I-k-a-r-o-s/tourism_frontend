@@ -10,7 +10,7 @@ const LoginModal = () => {
     password: "",
   });
 
-  const { loading, setLoading, tourismApi, navigate } =
+  const { loading, setLoading, tourismApi, navigate, saveUserToLocalStorage } =
     useContext(TourismContext);
 
   const handleSubmit = async (e) => {
@@ -26,6 +26,7 @@ const LoginModal = () => {
       const { data } = await tourismApi.post("/api/users/login", formData);
       if (data.success) {
         toast.success(data.message);
+        saveUserToLocalStorage(data.user);
         navigate("/");
         document.getElementById("login_modal").close();
       }
