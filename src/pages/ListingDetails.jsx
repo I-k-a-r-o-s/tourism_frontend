@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import { TourismContext } from "../context/TourismContext";
 import toast from "react-hot-toast";
 import DeleteListingModal from "../components/DeleteListingModal";
+import UpdateListingModal from "../components/UpdateListingModal";
 
 const ListingDetails = () => {
   const { id } = useParams();
@@ -35,6 +36,7 @@ const ListingDetails = () => {
           <p>Creator: {listing?.user.name}</p>
           <p>Likes: {listing?.likesCount}</p>
           <DeleteListingModal id={id} />
+          <UpdateListingModal id={id} />
         </div>
       </div>
     </div>
