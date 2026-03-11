@@ -7,14 +7,20 @@ const ListingCard = ({ listing }) => {
       <div className="card-body">
         <h2 className="card-title">
           {listing.title}
-          <div className="badge badge-secondary">{listing.location}</div>
+          <div className="badge badge-secondary">
+            Location: {listing.location}
+          </div>
         </h2>
         <p>{listing.shortDescription}</p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">{listing.likesCount}</div>
-          <div className="badge badge-outline">{listing.price}</div>
-          <div className="badge badge-outline">{listing.createdAt}</div>
-          <div className="badge badge-outline">{listing.user?.name}</div>
+          <div className="badge badge-outline">Likes: {listing.likesCount}</div>
+          <div className="badge badge-outline">
+            Price: ${listing.price.toFixed(2)}
+          </div>
+          <div className="badge badge-outline">
+            Created: {new Date(listing.createdAt).toLocaleDateString()}
+          </div>
+          <div className="badge badge-outline">Host: {listing.user?.name}</div>
         </div>
       </div>
     </div>
