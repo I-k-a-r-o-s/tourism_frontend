@@ -9,12 +9,7 @@ import { TourismContext } from "../context/TourismContext";
 const Navbar = () => {
   const { user, logOut } = useContext(TourismContext);
   const navLinks = [
-    { name: "Home", path: "/", icon: <AiOutlineHome size={20} /> },
-    {
-      name: "Listings",
-      path: "/getlisting/:id",
-      icon: <CiViewList size={20} />,
-    },
+    { name: "Home", path: "/", icon: <AiOutlineHome size={20} /> },  
   ];
   return (
     <div className="navbar bg-base-100 shadow-sm">
