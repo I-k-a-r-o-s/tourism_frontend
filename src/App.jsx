@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
 import ListingDetails from "./pages/ListingDetails";
 import Register from "./pages/Register";
+import CreateListing from "./pages/CreateListing";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/getlisting/:id" element={<ListingDetails />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/createlisting" element={<CreateListing />} />
       </Routes>
     </div>
   );

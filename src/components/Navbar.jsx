@@ -2,14 +2,14 @@ import { Link } from "react-router";
 import LoginModal from "./LoginModal";
 import { GrMenu } from "react-icons/gr";
 import { AiOutlineHome } from "react-icons/ai";
-import { CiViewList } from "react-icons/ci";
 import { useContext } from "react";
 import { TourismContext } from "../context/TourismContext";
 
 const Navbar = () => {
   const { user, logOut } = useContext(TourismContext);
   const navLinks = [
-    { name: "Home", path: "/", icon: <AiOutlineHome size={20} /> },  
+    { name: "Home", path: "/", icon: <AiOutlineHome size={20} /> },
+    {name: "Create Listing", path: "/createlisting", icon: <AiOutlineHome size={20} /> },  
   ];
   return (
     <div className="navbar bg-base-100 shadow-sm">
