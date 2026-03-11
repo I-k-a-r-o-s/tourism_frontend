@@ -1,6 +1,10 @@
+import LoginModal from "./LoginModal"
+
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <div>Navbar
+      <LoginModal />
+    </div>
   )
 }
 export default Navbar
