@@ -13,10 +13,7 @@ const ListingCard = ({ listing }) => {
         </h2>
         <p>{listing.shortDescription}</p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">Likes: {listing.likesCount}</div>
-          <div className="badge badge-outline">
-            Price: ${listing.price.toFixed(2)}
-          </div>
+          <div className="badge badge-outline">Likes: {listing.likesCount}</div>         
           <div className="badge badge-outline">
             Created: {new Date(listing.createdAt).toLocaleDateString()}
           </div>
